@@ -1,0 +1,107 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>SWAN</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles1.css">
+        <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
+        <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <div class="webhome">
+            <div id="map"></div>
+            <nav class="navigator">
+                <div class="container" onclick="myFunction(this)">
+                    <div class="header"></div>
+                      <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+                      <label for="openSidebarMenu" class="sidebarIconToggle">
+                        <div class="spinner diagonal part-1"></div>
+                        <div class="spinner horizontal"></div>
+                        <div class="spinner diagonal part-2"></div>
+                      </label>
+                      <div id="sidebarMenu">
+                        <ul class="sidebarMenuInner">
+                          <li>SWAN<span>Specific Weather Analysis</span></li>
+                          <li><a href="https://www.bmkg.go.id" target="_blank">Web BMKG</a></li>
+                          <li><a href="https://web.meteo.bmkg.go.id" target="_blank">Web Meteo BMKG</a></li>
+                          <li><a href="https://signature.bmkg.go.id" target="_blank">SIGNATURE BMKG</a></li>
+                          <li><a href="https://signature.bmkg.go.id/mosaic/" target="_blank">MOSAIC BMKG</a></li>
+                        </ul>
+                      </div>
+                </div>
+                <!-- <img width="30" src="https://www.bmkg.go.id/asset/img/logo/logo-bmkg.png"/> -->
+                <div class="title-s">
+                    <div>
+                        <img width="40" src="https://bmkg.go.id/asset/img/logo/logo-bmkg.png"/>
+                    </div>
+                    <div>
+                        <div class="title">SWAN</div>
+                        <div class="title1">Specific Weather Analysis</div>
+                    </div>
+                </div>                
+                <div class="language" id="lang">
+                    <div class="en" id="lang-en" onclick =selected(this)> EN </div>
+                    <div class="id" id="lang-id" onclick =selected(this)> ID </div>
+                </div>
+                <img width="30" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.iconsdb.com%2Ficons%2Fdownload%2Fwhite%2Fuser-512.png&f=1&nofb=1&ipt=640f3df43a04c2b2092866b235fb59acd9f0a69062ca9d803178e1ba13c2d6e8&ipo=images"/>
+            </nav>
+            <nav class="parameter">
+                <div style="color: white;font-family:Roboto,sans-serif;"> Parameter </div>
+                <div class="param">
+                    <div style="color: white;font-family:Roboto,sans-serif;font-size: 2vh;flex-grow:1;"> Isobar </div>
+                    <label class="paramswitch">
+                        <input type="checkbox" id="checkrh">
+                        <span class="parslider"></span>
+                    </label>
+                </div>
+                <div class="param">
+                    <div style="color: white;font-family:Roboto,sans-serif;font-size: 2vh;flex-grow:1;"> Angin </div>
+                    <label class="paramswitch">
+                        <input type="checkbox" id="checkki">
+                        <span class="parslider"></span>
+                    </label>
+                </div>
+                <div class="param">
+                    <div style="color: white;font-family:Roboto,sans-serif;font-size: 2vh;flex-grow:1;"> RH </div>
+                    <label class="paramswitch">
+                        <input type="checkbox" id="checkmslp">
+                        <span class="parslider"></span>
+                    </label>
+                </div>
+                <div class="param">
+                    <div style="color: white;font-family:Roboto,sans-serif;font-size: 2vh;flex-grow:1;"> Presipitasi </div>
+                    <label class="paramswitch">
+                        <input type="checkbox" id="checktp">
+                        <span class="parslider"></span>
+                    </label>
+                </div>
+                <button class="downbutton" onclick="location.href='https://web.meteo.bmkg.go.id//media/data/bmkg/mfy/Output.pdf'">UNDUH PETA</button>
+            </nav>
+            <nav class="playbut"> 
+                <button class="circle" id="before">
+                    <div class="button back"> </div>
+                    <div class="button back"> </div>
+                </button>
+                <button class="circle" id="next">
+                    <div class="button fwd"> </div>
+                    <div class="button fwd"> </div>
+                </button>
+            </nav>
+        </div>
+        <!-- Load external JavaScript -->
+        <script src="scripts.js"></script>
+        <script>
+            function myFunction(x) {
+                x.classList.toggle("change");
+            }
+        </script>
+        <script>
+            function myFunction1(x) {
+                x.classList.toggle("change");
+            }
+        </script>
+    </body>
+</html>
